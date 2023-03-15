@@ -205,9 +205,6 @@ $(document).ready(function () {
 //delete form Internship
 $(document).on('click',".deleteInternshipButton", function() {
   var number = $(this).attr('data-id');
-  console.log(number);
-  console.log('#internship'+number);
-  console.log($('.formInternship'));
   Confir['internship['+(number)+'][name]']=true;
   Confir['internship['+(number)+'][start]']=true;
   Confir['internship['+(number)+'][end]']=true;
