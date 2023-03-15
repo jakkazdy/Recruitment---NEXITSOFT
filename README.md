@@ -60,3 +60,15 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+
+
+## POLISH - Instalacja ręczna
+ - Zmień base_url w pliku Config/App.php 
+ $baseURL = 'http://recruitment.jakkazdy.pl/public/';
+ - Zmień dane dostępu do bazy danych w pliku Config/Database.php
+ - Plik z bazą danych recruitment.sql lub  w konsoli
+	 "php spark migrate"
+ - Zmień url w pliku public/js/formValidation.js
+
+ Wersja php zalecana 7.4
+ 
