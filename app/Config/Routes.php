@@ -29,8 +29,12 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+//form
+$routes->get('/', 'Form::index');
 $routes->get('/form', 'Form::index');
+$routes->post('/form/send', 'Form::send');
+$routes->get('/form/send', 'Form::index');
+$routes->get('/form/ajaxGeneratingFormInternship/(:num)', 'Form::ajaxGeneratingFormInternship/$1');
 
 /*
  * --------------------------------------------------------------------
