@@ -16,7 +16,7 @@ class Attachment extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         'id_candidate',
-        'name_files',
+        'name_file',
     ];
 
     // Dates

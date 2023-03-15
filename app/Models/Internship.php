@@ -29,7 +29,9 @@ class Internship extends Model
     // protected $deletedField  = 'deleted_at';
 
     // Validation
-    protected $validationRules      = [];
+    protected $validationRules      = [
+        'name_brand' => 'required',
+    ];
     protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
@@ -44,4 +46,9 @@ class Internship extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    // public function put($data){
+    //     $query = $this->db->table($this->table)->insert($data);
+    //     return $query;
+    // }
 }
