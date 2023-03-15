@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Models\Candidates as CandidatesModel;
 use App\Models\Attachment as AttachmentModal;
 use App\Models\Internship as InternshipModal;
-use App\Controllers\FormRecruitment\Validation;
 
 class Form extends BaseController
 {
@@ -67,7 +66,17 @@ class Form extends BaseController
     }
 
     private function validationForms(){
-        Validation::index();
+        if(!$this->validationCandidates()){
+            return false;
+        }
+        if(!$this->validationAttachments()){
+            return false;
+        }
+        if(!$this->validationInternships()){
+            return false;
+        }
+
+        return true;
     }
 
     private function saveCandidates($data,$uploadName){
